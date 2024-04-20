@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import NavLink from "./NavLink";
 
 const linksArray = [
   { url: "/", title: "Home" },
@@ -16,17 +17,15 @@ export default function NavBar() {
   return (
     <div className="h-full flex items-center justify-end px-4 sm:px-8 md:px-12 lgpx-20 xl:px-48 text-xl">
       {/* links */}
-      <div className="hidden gap-10 w-1/2 md:flex">
+      <div className="hidden gap-10 w-3/4 md:flex">
         {linksArray.map((link) => (
-          <Link href={link.url} key={link.title}>
-            {link.title}
-          </Link>
+          <NavLink link={link} key={link.title} />
         ))}
       </div>
       {/* logo */}
       {/* <div className="">coming soon</div> */}
       {/* my social media */}
-      <div className="hidden w-1/2 gap-5 md:flex justify-end ">
+      <div className="hidden w-1/4 gap-5 justify-end md:flex">
         <Link href="https://github.com/perfectblue0">
           <Image
             src="/github.png"
@@ -45,7 +44,7 @@ export default function NavBar() {
         </Link>
       </div>
       {/* responsive menu */}
-      <div className="md:hidden items-end">
+      <div className="items-end md:hidden ">
         {/* stacked menu button */}
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
@@ -58,7 +57,7 @@ export default function NavBar() {
         {/* list */}
 
         {open && (
-          <div className="w-screen h-screen top-0 left-0  absolute bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40">
+          <div className="w-screen h-screen top-0 left-0 absolute bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40">
             {linksArray.map((link) => (
               <Link href={link.url} key={link.title}>
                 {link.title}
