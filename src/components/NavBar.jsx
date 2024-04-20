@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import NavLink from "./NavLink";
+import { motion } from "framer-motion";
 
 const linksArray = [
   { url: "/", title: "Home" },
@@ -13,6 +14,59 @@ const linksArray = [
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
+
+  const firstVar = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: 45,
+      backgroundColor: "rgb(255,255,255)",
+    },
+  };
+
+  const secondVar = {
+    closed: {
+      opacity: 1,
+    },
+    opened: {
+      opacity: 0,
+    },
+  };
+
+  const thirdVar = {
+    closed: {
+      rotate: 0,
+    },
+    opened: {
+      rotate: -45,
+      backgroundColor: "rgb(255,255,255)",
+    },
+  };
+
+  const linksVar = {
+    closed: {
+      x: "100vw",
+    },
+    opened: {
+      x: 0,
+      transition: {
+        when: "beforeChildren",
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemLink = {
+    closed: {
+      x: -10,
+      opacity: 0,
+    },
+    opened: {
+      x: 0,
+      opacity: 1,
+    },
+  };
 
   return (
     <div className="h-full flex items-center justify-end px-4 sm:px-8 md:px-12 lgpx-20 xl:px-48 text-xl">
@@ -50,20 +104,37 @@ export default function NavBar() {
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
           onClick={() => setOpen((prev) => !prev)}
         >
-          <div className="w-11 h-1 bg-black rounded origin-left"></div>
-          <div className="w-11 h-1 bg-black rounded origin-left"></div>
-          <div className="w-11 h-1 bg-black rounded origin-left"></div>
+          <motion.div
+            variants={firstVar}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
+          <motion.div
+            variants={secondVar}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded"
+          ></motion.div>
+          <motion.div
+            variants={thirdVar}
+            animate={open ? "opened" : "closed"}
+            className="w-10 h-1 bg-black rounded origin-left"
+          ></motion.div>
         </button>
         {/* list */}
 
         {open && (
-          <div className="w-screen h-screen top-0 left-0 absolute bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40">
+          <motion.div
+            variants={linksVar}
+            initial="closed"
+            animate="opened"
+            className="w-screen h-screen top-0 left-0 absolute bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40"
+          >
             {linksArray.map((link) => (
-              <Link href={link.url} key={link.title}>
-                {link.title}
-              </Link>
+              <motion.div variants={itemLink} key={link.title}>
+                <Link href={link.url}>{link.title}</Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         )}
       </div>
     </div>
