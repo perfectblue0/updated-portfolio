@@ -68,6 +68,11 @@ export default function NavBar() {
     },
   };
 
+  // Close the menu when a link is clicked
+  const handleLinkClick = () => {
+    setOpen(false);
+  };
+
   return (
     <div className="h-full flex items-center justify-end px-4 sm:px-8 md:px-12 lgpx-20 xl:px-48 text-xl">
       {/* links */}
@@ -102,7 +107,7 @@ export default function NavBar() {
         {/* stacked menu button */}
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
-          onClick={() => setOpen((prev) => !prev)}
+          onClick={() => setOpen(!open)}
         >
           <motion.div
             variants={firstVar}
@@ -121,7 +126,6 @@ export default function NavBar() {
           ></motion.div>
         </button>
         {/* list */}
-
         {open && (
           <motion.div
             variants={linksVar}
@@ -130,8 +134,10 @@ export default function NavBar() {
             className="w-screen h-screen top-0 left-0 absolute bg-black text-white flex flex-col items-center justify-center gap-10 text-3xl z-40"
           >
             {linksArray.map((link) => (
-              <motion.div variants={itemLink} key={link.title}>
-                <Link href={link.url}>{link.title}</Link>
+              <motion.div variants={itemLink} className="" key={link.title}>
+                <Link href={link.url} onClick={handleLinkClick}>
+                  {link.title}
+                </Link>
               </motion.div>
             ))}
           </motion.div>
