@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={mulish.className}>
-        <div className="w-screen h-screen">
+        <div className="w-screen h-screen top-0 bottom-0 bg-cover overflow-y-auto bg-gradient-to-b from-rose-200 via-green-100 to-indigo-200">
           <div className="h-24">
             <NavBar />
           </div>
