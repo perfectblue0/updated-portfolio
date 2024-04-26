@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -27,59 +26,58 @@ export default function Carousel() {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const pSlide = () => {
-    const isFirst = currentIndex === 0;
-    const newInd = isFirst ? picsArray.length - 1 : currentIndex - 1;
+  const prevSlide = () => {
+    const firstSlide = currentIndex === 0;
+    const newInd = firstSlide ? picsArray.length - 1 : currentIndex - 1;
     setCurrentIndex(newInd);
   };
 
-  const nextS = () => {
+  const followingSlide = () => {
     const isLast = currentIndex === picsArray.length - 1;
     const newInd = isLast ? 0 : currentIndex + 1;
     setCurrentIndex(newInd);
   };
 
+  const currentProject = picsArray[currentIndex];
+
   return (
-    // need to decide to use react and figure out way to only show first project so i can use above code or use ui library to finish carousel
-    <div className="w-3/4 m-auto relative group">
+    <div className="w-3/4 m-auto relative">
       <div className="mt-20">
-        {picsArray.map((p) => (
-          <div
-            className="bg-red-300 h-[450px] flex flex-col items-center rounded-lg"
-            key={p.project}
-          >
-            <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-              <Image
-                className=""
-                src={p.img}
-                fill
-                sizes="(max-width: 640px) 80vw, (max-width: 768px) 96vw, (max-width: 1024px) 500px, 600px"
-                alt=""
-              />
-            </div>
-            <div className="flex flex-col items-center gap-6">
-              <h3 className="text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl">
-                {p.project}
-              </h3>
-              <p className="italic w-80 md:w96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-                {p.description}
-              </p>
-              <Link href={p.website} className="flex justify-end">
-                <button className="bg-blue-300 p-2 rounded">
-                  View Project
-                </button>
-              </Link>
-            </div>
+        <div
+          className="bg-red-300 h-[450px] flex flex-col items-center rounded-lg"
+          key={currentProject.project}
+        >
+          <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+            <Image
+              src={currentProject.img}
+              fill
+              sizes="(max-width: 640px) 80vw, (max-width: 768px) 96vw, (max-width: 1024px) 500px, 600px"
+              alt={currentProject.project}
+            />
           </div>
-        ))}
+          <div className="flex flex-col items-center gap-6">
+            <h3 className="text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl">
+              {currentProject.project}
+            </h3>
+            <p className="italic w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
+              {currentProject.description}
+            </p>
+            <Link
+              href={currentProject.website}
+              className="bg-blue-300 p-2 rounded"
+            >
+              View Project
+            </Link>
+          </div>
+        </div>
       </div>
       {/* left arrow */}
-      <div className="absolute p-2 top-[50%] -translate-x-0 translate-y-[-%50] left-5 text-2xl rounded bg-white">
-        <div onClick={pSlide}>&lt;</div>
+      <div className="absolute p-2 top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded bg-white cursor-pointer">
+        <div onClick={prevSlide}>&lt;</div>
       </div>
       {/* right arrow */}
-      <div className="absolute p-2 top-[50%] -translate-x-0 translate-y-[-%50] right-5 text-2xl rounded bg-white">
-        <div onClick={nextS}>&gt;</div>
+      <div className="absolute p-2 top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded bg-white cursor-pointer">
+        <div onClick={followingSlide}>&gt;</div>
       </div>
     </div>
   );
