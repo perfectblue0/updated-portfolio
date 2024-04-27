@@ -48,7 +48,7 @@ export default function Carousel() {
             className="flex flex-col items-center gap-3 rounded-lg"
             key={currentProject.project}
           >
-            <div className="relative w-80 h-56 xs:w-65 xs:h-53 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+            <div className="relative w-80 h-56 xs:w-65 xs:h-53 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] ">
               <Image
                 src={currentProject.img}
                 fill
@@ -60,7 +60,7 @@ export default function Carousel() {
               <h3 className="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl">
                 {currentProject.project}
               </h3>
-              <p className="italic text-center w-[100%] h-[8rem] xs:text-sm xs:h-30 lg:text-lg xl:w-[500px]">
+              <p className="italic text-center w-[100%] h-[8rem] xs:text-sm xs:h-30 lg:text-lg">
                 {currentProject.description}
               </p>
               <Link
