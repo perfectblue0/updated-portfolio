@@ -11,7 +11,7 @@ export default function Carousel() {
       website: `https://perfectblue0.github.io/c-20-React-Portfolio/`,
     },
     {
-      project: `MySQL E-commerce Backend Project`,
+      project: `E-commerce Backend`,
       img: `/ecomImg.jpg`,
       description: `This is an undeployed project where I used Sequelize to interact with a MySQL database to build the backend of an e-commerce application.`,
       website: `https://github.com/perfectblue0/c-13-E-commerce-ORM?tab=readme-ov-file`,
@@ -41,43 +41,51 @@ export default function Carousel() {
   const currentProject = picsArray[currentIndex];
 
   return (
-    <div className="w-3/4 m-auto relative">
-      <div className="mt-20">
-        <div
-          className="bg-red-300 h-[450px] flex flex-col items-center rounded-lg"
-          key={currentProject.project}
-        >
-          <div className="relative w-80 h-56 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
-            <Image
-              src={currentProject.img}
-              fill
-              sizes="(max-width: 640px) 80vw, (max-width: 768px) 96vw, (max-width: 1024px) 500px, 600px"
-              alt={currentProject.project}
-            />
-          </div>
-          <div className="flex flex-col items-center gap-6">
-            <h3 className="text-xl font-bold md:text-2xl lg:text-4xl xl:text-6xl">
-              {currentProject.project}
-            </h3>
-            <p className="italic w-80 md:w-96 lg:w-[500px] lg:text-lg xl:w-[600px]">
-              {currentProject.description}
-            </p>
-            <Link
-              href={currentProject.website}
-              className="bg-blue-300 p-2 rounded"
-            >
-              View Project
-            </Link>
+    <div className="flex gap-2 flex-col">
+      <div className="w-2/3 m-auto">
+        <div className="mt-10">
+          <div
+            className="flex flex-col items-center gap-3 rounded-lg"
+            key={currentProject.project}
+          >
+            <div className="relative w-80 h-56 xs:w-65 xs:h-53 md:w-96 md:h-64 lg:w-[500px] lg:h-[350px] xl:w-[600px] xl:h-[420px]">
+              <Image
+                src={currentProject.img}
+                fill
+                className="rounded-lg"
+                alt={currentProject.project}
+              />
+            </div>
+            <div className="flex flex-col items-center gap-3">
+              <h3 className="text-lg font-bold md:text-xl lg:text-2xl xl:text-4xl">
+                {currentProject.project}
+              </h3>
+              <p className="italic text-center w-[100%] h-[8rem] xs:text-sm xs:h-30 lg:text-lg xl:w-[500px]">
+                {currentProject.description}
+              </p>
+              <Link
+                href={currentProject.website}
+                className="bg-black text-white hover:bg-gradient-to-r from-rose-800 to-indigo-700 p-2 mb-2 rounded xs:text-sm"
+              >
+                View Project
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-      {/* left arrow */}
-      <div className="absolute p-2 top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded bg-white cursor-pointer">
-        <div onClick={prevSlide}>&lt;</div>
-      </div>
-      {/* right arrow */}
-      <div className="absolute p-2 top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded bg-white cursor-pointer">
-        <div onClick={followingSlide}>&gt;</div>
+        <div className="flex flex-row justify-center">
+          <div
+            className="flex items-center cursor-pointer text-white hover:bg-white hover:text-black p-4 h-2 m-3 rounded-lg bg-gray-800"
+            onClick={prevSlide}
+          >
+            &lt;
+          </div>
+          <div
+            className="flex items-center cursor-pointer text-white hover:bg-white hover:text-black p-4 h-2 m-3 rounded-lg bg-gray-800"
+            onClick={followingSlide}
+          >
+            &gt;
+          </div>
+        </div>
       </div>
     </div>
   );
