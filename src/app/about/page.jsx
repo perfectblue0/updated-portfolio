@@ -84,7 +84,7 @@ export default function AboutPage() {
           >
             {skills.map((skill) => (
               <div
-                className="mr-2 p-2 bg-black text-white rounded-lg text-md cursor-pointer hover:bg-gradient-to-r from-purple-700 to-rose-700"
+                className="mr-2 p-2 rounded-lg text-md cursor-pointer bg-gray-700 text-white hover:bg-white hover:text-black transition ease-out duration-500"
                 key={skill}
               >
                 {skill}

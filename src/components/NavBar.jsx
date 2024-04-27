@@ -68,7 +68,7 @@ export default function NavBar() {
     },
   };
 
-  // Close the menu when a link is clicked
+  // Closes the menu when a link is clicked
   const handleLinkClick = () => {
     setOpen(false);
   };

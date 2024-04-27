@@ -8,9 +8,8 @@ export default function NavLink({ link }) {
 
   return (
     <Link
-      className={`p-2 rounded-lg ${
-        pathName === link.url &&
-        "bg-gradient-to-r from-blue-700 to-purple-700 text-white"
+      className={`hover:bg-sky-800 transition ease-out duration-500 p-2 mb-2 rounded-lg transform hover:scale-105 hover:text-white ${
+        pathName === link.url && "border-gray-700 border-2"
       }`}
       href={link.url}
     >

@@ -32,12 +32,12 @@ export default function HomePage() {
         {/* buttons */}
         <div className="w-full flex pb-4 gap-4">
           <Link href="/portfolio">
-            <button className="p-3 rounded-lg bg-black text-white hover:bg-gradient-to-r from-purple-700 to-rose-700">
+            <button className="p-3 rounded-lg bg-gray-700 text-white hover:bg-sky-800 transition ease-out duration-500 transform hover:scale-105">
               View My Work
             </button>
           </Link>
           <Link href="/contact">
-            <button className="p-3 rounded-lg bg-black text-white hover:bg-gradient-to-r from-purple-700 to-rose-700">
+            <button className="p-3 rounded-lg bg-gray-700 text-white hover:bg-sky-800 transition ease-out duration-500 transform hover:scale-105">
               Contact Me
             </button>
           </Link>
