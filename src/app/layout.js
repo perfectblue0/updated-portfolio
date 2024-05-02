@@ -13,11 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={mulish.className}>
-        <div className="w-screen h-screen top-0 bottom-0 bg-cover overflow-y-auto bg-gradient-to-b from-sky-300 via-orange-200 to-cyan-200">
-          <div className="h-24">
+        <div className="flex flex-col h-screen bg-gradient-to-b from-sky-300 via-orange-200 to-cyan-200 overflow-y-auto">
+          <div className="mt-5">
             <NavBar />
           </div>
-          <div className="h-[calc(100vh-6rem)]">{children}</div>
+          <div className="flex-grow ">{children}</div>
         </div>
       </body>
     </html>

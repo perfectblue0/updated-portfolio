@@ -30,7 +30,7 @@ export default function HomePage() {
           and ingenuity.
         </p>
         {/* buttons */}
-        <div className="w-full flex pb-4 gap-4">
+        <div className="hidden xs:flex w-full pb-4 gap-4">
           <Link href="/portfolio">
             <button className="p-3 rounded-lg bg-gray-700 text-white hover:bg-sky-800 transition ease-out duration-500 transform hover:scale-105">
               View My Work
