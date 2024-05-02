@@ -107,6 +107,7 @@ export default function NavBar() {
         {/* stacked menu button */}
         <button
           className="w-10 h-8 flex flex-col justify-between z-50 relative"
+          aria-label="menu"
           onClick={() => setOpen(!open)}
         >
           <motion.div

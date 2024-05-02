@@ -1,47 +1,33 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <div className="h-full flex flex-col px-4 sm:px-8 md:px-12 lg:px-20 lg:flex-row xl:px-48">
+    <div className="h-full flex flex-col px-4 sm:px-8 sm:items-center md:px-12 lg:px-20 lg:flex-row xl:px-48">
       {/* image */}
-      <div className="h-1/2 relative mb-2 mr-3 lg:h-full lg:w-1/2">
+      <div className="h-1/2  relative mb-2 mr-3 sm:w-1/3 sm:h-1/3 md:w-1/3 lg:h-full lg:w-1/2">
         <Image
           src="/womanLaptopBirds.png"
           alt="woman looking at phone and holding laptop surrounded by clouds and birds"
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 639px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 50vw"
           className="object-contain"
         />
       </div>
       {/* text container */}
-      <div className="h-1/2 flex flex-col gap-8 items-center justify-center lg:h-full lg:w-1/2 ">
+      <div className="h-1/2 flex flex-col gap-4 justify-center xs:items-center sm:w-[70%] sm:items-center md:items-center lg:w-1/2 lg:h-full">
         {/* title */}
-        <h3 className="text-3xl md:text-4xl mt-6 font-bold">
-          Harnessing the Power of Tech and Creativity
+        <h3 className="font-bold text-6xl mt-6 sm:text-6xl sm:text-center md:text-7xl  lg:text-8xl">
+          Welcome
         </h3>
+
         {/* description */}
-        <p className="md:text-lg">
-          Welcome to my virtual gallery, where imagination intertwines with
-          technical skill. Dive into my portfolio, showcasing a variety of
-          projects meticulously crafted to highlight my dedication to quality
-          and ingenuity.
+        <p className="pb-6 xs:w-[80%] sm:text-center sm:w-[70%] md:text-lg md:w-[70%] ">
+          Whether I&rsquo;m diving into a lively Scrabble match, baking up a
+          frenzy, or teaming up in a video game with my husband, I&rsquo;m
+          always on the hunt for the latest tech and coolest libraries.
         </p>
-        {/* buttons */}
-        <div className="hidden xs:flex w-full pb-4 gap-4">
-          <Link href="/portfolio">
-            <button className="p-3 rounded-lg bg-gray-700 text-white hover:bg-sky-800 transition ease-out duration-500 transform hover:scale-105">
-              View My Work
-            </button>
-          </Link>
-          <Link href="/contact">
-            <button className="p-3 rounded-lg bg-gray-700 text-white hover:bg-sky-800 transition ease-out duration-500 transform hover:scale-105">
-              Contact Me
-            </button>
-          </Link>
-        </div>
       </div>
     </div>
   );
