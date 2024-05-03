@@ -1,32 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { picsArray } from "@/app/data/portfolioData";
 
 export default function Carousel() {
-  const picsArray = [
-    {
-      project: `First React Portfolio`,
-      img: `/vanPort.jpg`,
-      altText: `css code`,
-      description: `This deployed project was my first application made with React and Vanilla CSS.`,
-      website: `https://perfectblue0.github.io/c-20-React-Portfolio/`,
-    },
-    {
-      project: `E-commerce Backend`,
-      img: `/ecomImg.jpg`,
-      altText: `street sign that says e commerce`,
-      description: `This is an undeployed project where I used Sequelize to interact with a MySQL database to build the backend of an e-commerce application.`,
-      website: `https://github.com/perfectblue0/c-13-E-commerce-ORM?tab=readme-ov-file`,
-    },
-    {
-      project: `Social Network API`,
-      img: `/handsNet.jpg`,
-      altText: `hands of different people on a table`,
-      description: `I built this API so users could share their thoughts, reactions to friends' thoughts, and create a list of their friends. This project is not deployed and uses Express.js for routing, Day.js to format dates, has a MongoDB database, and Mongoose ODM.`,
-      website: `https://github.com/perfectblue0/c-18-NoSQL-Social-Net-API`,
-    },
-  ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loaded, setLoaded] = useState(false);
 

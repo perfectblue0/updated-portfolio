@@ -13,6 +13,7 @@ export default function HomePage() {
           fill
           sizes="(max-width: 639px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 50vw"
           className="object-contain"
+          priority
         />
       </div>
       {/* text container */}

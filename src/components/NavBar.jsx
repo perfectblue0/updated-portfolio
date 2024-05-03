@@ -4,13 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import NavLink from "./NavLink";
 import { motion } from "framer-motion";
-
-const linksArray = [
-  { url: "/", title: "Home" },
-  { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Portfolio" },
-  { url: "/contact", title: "Contact" },
-];
+import { linksArray } from "@/app/data/portfolioData";
 
 export default function NavBar() {
   const [open, setOpen] = useState(false);
@@ -81,8 +75,6 @@ export default function NavBar() {
           <NavLink link={link} key={link.title} />
         ))}
       </div>
-      {/* logo */}
-      {/* <div className="">coming soon</div> */}
       {/* my social media */}
       <div className="hidden w-1/4 gap-5 justify-end md:flex">
         <Link href="https://github.com/perfectblue0">
