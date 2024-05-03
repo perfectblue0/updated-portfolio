@@ -68,7 +68,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="h-full flex items-center justify-end px-4 sm:px-8 md:px-12 lgpx-20 xl:px-48 text-xl">
+    <div className="h-full flex items-center justify-end px-4 xs:justify-between sm:justify-between sm:px-8 md:px-12 lg:px-20 xl:px-48 text-xl">
       {/* links */}
       <div className="hidden gap-10 w-3/4 md:flex">
         {linksArray.map((link) => (
@@ -76,7 +76,7 @@ export default function NavBar() {
         ))}
       </div>
       {/* my social media */}
-      <div className="hidden w-1/4 gap-5 justify-end md:flex">
+      <div className="w-1/4 gap-5 justify-start flex md:justify-end lg:justify-end xl:justify-end">
         <Link href="https://github.com/perfectblue0">
           <Image
             src="/github.png"
