@@ -1,7 +1,7 @@
 const linksArray = [
   { url: "/", title: "Home" },
   { url: "/about", title: "About" },
-  { url: "/portfolio", title: "Portfolio" },
+  { url: "/projects", title: "Projects" },
   { url: "/contact", title: "Contact" },
 ];
 
@@ -55,28 +55,28 @@ const experiences = [
   },
 ];
 
-const picsArray = [
+const projectsArray = [
   {
+    id: 88,
     project: `First React Portfolio`,
-    img: `/vanPort.jpg`,
-    altText: `css code`,
-    description: `This deployed project was my first application made with React and Vanilla CSS.`,
+    description: `This deployed project was my second portfolio application with multiple images and hover effects.`,
+    tech: `React, CSS`,
     website: `https://perfectblue0.github.io/c-20-React-Portfolio/`,
   },
   {
+    id: 89,
     project: `E-commerce Backend`,
-    img: `/ecomImg.jpg`,
-    altText: `street sign that says e commerce`,
     description: `This is an undeployed project where I used Sequelize to interact with a MySQL database to build the backend of an e-commerce application.`,
+    tech: `MySQL, Sequelize, Inquirer`,
     website: `https://github.com/perfectblue0/c-13-E-commerce-ORM?tab=readme-ov-file`,
   },
   {
+    id: 90,
     project: `Social Network API`,
-    img: `/handsNet.jpg`,
-    altText: `hands of different people on a table`,
     description: `I built this API so users could share their thoughts, reactions to friends' thoughts, and create a list of their friends. This project is not deployed and uses Express.js for routing, Day.js to format dates, has a MongoDB database, and Mongoose ODM.`,
+    tech: `MongoDB, Mongoose, Express.js, Day.js, Insomnia to test`,
     website: `https://github.com/perfectblue0/c-18-NoSQL-Social-Net-API`,
   },
 ];
 
-export { skills, experiences, linksArray, picsArray };
+export { skills, experiences, linksArray, projectsArray };

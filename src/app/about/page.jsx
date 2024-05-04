@@ -14,7 +14,7 @@ export default function AboutPage() {
   return (
     <>
       {/* text */}
-      <div className="flex flex-col p-4 gap-24 mt-12 sm:p-8 md:p-12 md:gap-32 lg:p-20 lg:gap-49 xl:p-48 xl:gap-64">
+      <div className="flex flex-col p-4 gap-24 mt-12 xs:p-7 sm:p-8 md:p-12 md:gap-32 lg:p-20 lg:gap-49 xl:p-48 xl:gap-64">
         {/* container bio */}
         <div className="flex flex-col justify-center gap-12">
           {/* title bio */}
@@ -73,14 +73,12 @@ export default function AboutPage() {
             {/* experience container */}
 
             {experiences.map((exp) => (
-              <div className="flex flex-row text-md mb-6" key={exp.id}>
-                <div className="w-1/3 text-sm mr-4 md:text-lg lg:text-xl xl:text-xl">
-                  <h4>{exp.event}</h4>
-                  <h5>{exp.date}</h5>
+              <div className="flex flex-row mb-6" key={exp.id}>
+                <div className="w-1/3 mr-4">
+                  <h4 className="mb-2 text-lg xs:text-sm">{exp.event}</h4>
+                  <p className="text-base md:text-sm">{exp.date}</p>
                 </div>
-                <p className="w-2/3 text-xs md:text-sm lg:text-lg xl:text-lg">
-                  {exp.description}
-                </p>
+                <p className="w-2/3 text-base">{exp.description}</p>
               </div>
             ))}
           </motion.div>

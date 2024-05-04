@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* image */}
       <div className="h-1/2 relative mb-2 mr-3 sm:w-1/3 sm:h-1/3 sm:mb-0 md:mb-2 md:mt-6 md:w-1/3 lg:h-full lg:w-1/2">
         <Image
-          src="/womanLaptopBirds.png"
+          src="/womanLaptopBirds.webp"
           alt="woman looking at phone and holding laptop surrounded by clouds and birds"
           fill
           sizes="(max-width: 639px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 50vw"
@@ -19,7 +19,7 @@ export default function HomePage() {
       {/* text container */}
       <div className="h-1/2 flex flex-col gap-4 justify-center xs:items-center sm:w-[70%] sm:mt-3 sm:items-center md:items-center lg:w-1/2 lg:h-full">
         {/* title */}
-        <h3 className="font-bold text-6xl mt-6 xs:text-5xl sm:text-center lg:text-8xl">
+        <h3 className="text-6xl mt-6 xs:text-5xl sm:text-center lg:text-8xl">
           Welcome
         </h3>
 
