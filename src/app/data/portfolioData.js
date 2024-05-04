@@ -57,23 +57,30 @@ const experiences = [
 
 const projectsArray = [
   {
+    id: 87,
+    project: `Next.js React Portfolio`,
+    description: `This is my latest portfolio, this application, that has a completed back-end. Users can view my work and send me an email as well. Check out the link to view the repo.`,
+    tech: `React, Next.js, Tailwind CSS, Framer-motion, EmailJs`,
+    website: `https://github.com/perfectblue0/updated-portfolio`,
+  },
+  {
     id: 88,
     project: `First React Portfolio`,
-    description: `This deployed project was my second portfolio application with multiple images and hover effects.`,
+    description: `This deployed project was my second portfolio application with multiple images and hover effects. Explore the deployed application below.`,
     tech: `React, CSS`,
     website: `https://perfectblue0.github.io/c-20-React-Portfolio/`,
   },
   {
     id: 89,
     project: `E-commerce Backend`,
-    description: `This is an undeployed project where I used Sequelize to interact with a MySQL database to build the backend of an e-commerce application.`,
+    description: `This is an undeployed project where I used Sequelize to interact with a MySQL database to build the backend of an e-commerce application. Check out the link for the code, instructions, and a video that demonstrates the application's functionality.`,
     tech: `MySQL, Sequelize, Inquirer`,
     website: `https://github.com/perfectblue0/c-13-E-commerce-ORM?tab=readme-ov-file`,
   },
   {
     id: 90,
     project: `Social Network API`,
-    description: `I built this API so users could share their thoughts, reactions to friends' thoughts, and create a list of their friends. This project is not deployed and uses Express.js for routing, Day.js to format dates, has a MongoDB database, and Mongoose ODM.`,
+    description: `I built this API so users could share their thoughts, reactions to friends' thoughts, and create a list of their friends. This project is not deployed and uses Express.js for routing, Day.js to format dates, has a MongoDB database, and Mongoose ODM. Check out the link for the code, instructions, and a video that demonstrates the application's functionality.`,
     tech: `MongoDB, Mongoose, Express.js, Day.js, Insomnia to test`,
     website: `https://github.com/perfectblue0/c-18-NoSQL-Social-Net-API`,
   },

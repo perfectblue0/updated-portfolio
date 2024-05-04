@@ -13,10 +13,10 @@ export default function PortfolioPage() {
             <p className="font-bold text-sm w-[70%]">{p.tech}</p>
           </div>
           <div className="w-2/3">
-            <p className="mb-3 w-[80%] xs:text-sm">{p.description}</p>
+            <p className="mb-3 w-[80%] text-sm">{p.description}</p>
             <Link
               href={p.website}
-              className="w-fit transition ease-out duration-500 transform  hover:text-cyan-600"
+              className="w-fit text-base transition ease-out duration-500 transform  hover:text-cyan-600"
             >
               View here
             </Link>

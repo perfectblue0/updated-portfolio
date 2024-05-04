@@ -75,10 +75,10 @@ export default function AboutPage() {
             {experiences.map((exp) => (
               <div className="flex flex-row mb-6" key={exp.id}>
                 <div className="w-1/3 mr-4">
-                  <h4 className="mb-2 text-lg xs:text-sm">{exp.event}</h4>
-                  <p className="text-base md:text-sm">{exp.date}</p>
+                  <h4 className="mb-2 text-lg xs:text-base">{exp.event}</h4>
+                  <p className="text-sm">{exp.date}</p>
                 </div>
-                <p className="w-2/3 text-base">{exp.description}</p>
+                <p className="w-2/3 text-sm">{exp.description}</p>
               </div>
             ))}
           </motion.div>
