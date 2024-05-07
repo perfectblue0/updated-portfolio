@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function PortfolioPage() {
   return (
-    <div className="flex flex-col mt-12 p-4 gap-24 xs:p-7 sm:p-8 md:p-12 lg:p-20 xl:p-48">
+    <div className="flex flex-col mt-12 p-4 gap-24 xs:p-7 xs:mb-12 sm:p-8 md:p-12 lg:p-20 xl:p-48">
       <h2 className="text-2xl">My Projects</h2>
       {projectsArray.map((p) => (
         <div className="flex flex-row gap-5" key={p.id}>
