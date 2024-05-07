@@ -25,12 +25,12 @@ export default function HomePage() {
 
         {/* description */}
         <p className="pb-6 text-center w-[80%] md:text-lg md:w-[70%] lg:w-[90%]">
-          Whether I&rsquo;m diving into a lively Scrabble match, baking up a
-          frenzy, or teaming up in a video game with my husband, I&rsquo;m
-          always eager to take on new challenges. This zest for exploration
-          extends into my professional life where I am passionate about learning
-          and continually updating my skills with the latest developer
-          technologies.
+          I&rsquo;m Paola G. Lupercio, aspiring front-end developer. Whether
+          I&rsquo;m immersed in a Scrabble match, baking something delicious, or
+          gaming with my husband, I&rsquo;m always eager for new challenges.
+          This zest for exploration extends to my professional life, where
+          I&rsquo;m passionate about learning and staying updated with the
+          latest developer technologies.
         </p>
       </div>
     </div>

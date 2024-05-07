@@ -9,7 +9,7 @@ export default function PortfolioPage() {
       {projectsArray.map((p) => (
         <div className="flex flex-row gap-5" key={p.id}>
           <div className="w-1/3">
-            <h3 className="text-xl xs:text-base">{p.project}</h3>
+            <h3 className="text-xl mb-2 xs:text-base">{p.project}</h3>
             <p className="font-bold text-sm w-[70%]">{p.tech}</p>
           </div>
           <div className="w-2/3">
