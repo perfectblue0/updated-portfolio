@@ -8,7 +8,7 @@ export default function HomePage() {
       {/* image */}
       <div className="h-1/2 relative mb-2 mr-3 sm:w-1/3 sm:h-1/3 sm:mb-0 md:mb-2 md:mt-6 md:w-1/3 lg:h-full lg:w-1/2">
         <Image
-          src="/womanLaptopBirds.webp"
+          src="/woman_laptop_birds.webp"
           alt="woman looking at phone and holding laptop surrounded by clouds and birds"
           fill
           sizes="(max-width: 639px) 100vw, (max-width: 1024px) 100vw, (max-width: 1280px) 50vw, 50vw"
