@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import DOMPurify from "dompurify";
 
 export default function ContactPage() {
   const [sent, isSent] = useState(false);
@@ -12,22 +13,44 @@ export default function ContactPage() {
     e.preventDefault();
     setError(false);
     isSent(false);
+
+    const sanitizedMessage = DOMPurify.sanitize(
+      form.current.user_message.value
+    );
+
+    const isValidEmail = validateEmail(form.current.user_email.value);
+    if (!isValidEmail) {
+      setError(true);
+      return;
+    }
+
     emailjs
       .sendForm(
         process.env.NEXT_PUBLIC_SERVICE_ID,
         process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        form.current,
+        {
+          ...form.current,
+          user_message: sanitizedMessage,
+        },
         process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
+        // eslint-disable-next-line no-unused-vars
         (result) => {
           isSent(true);
-          form.current.reset;
+          form.current.reset();
         },
         (err) => {
           console.log(err.text);
+          setError(true);
         }
       );
+  };
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[A-Za-z._\-0-9]*[@][A-Za-z]*[.][a-z]{2,4}$/;
+
+    return emailRegex.test(email);
   };
 
   return (
