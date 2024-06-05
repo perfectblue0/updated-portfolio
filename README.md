@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# updated-portfolio
 
-## Getting Started
+## Description
 
-First, run the development server:
+A Server Side Rendered (SSR) website that uses the “use client” directive on several files so that they can be interactive; this allows for the use of react hooks and click events. This responsive application is secured with the help of DOMPurify, and RegEx for email validation. My portfolio website’s Lighthouse scores are as follows on a desktop: Performance 100, Accessibility 100, Best Practices 96, and SEO 100.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Installation](#installation)
+- [Screenshots](#screenshots)
+- [License](#license)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+There is no installation necessary. Click on the link below to explore our app.
 
-## Learn More
+[My Portfolio Website](https://avidwebdev.com)
 
-To learn more about Next.js, take a look at the following resources:
+Check out my Repo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+[My Portfolio Repo](https://github.com/perfectblue0/updated-portfolio)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Screenshots
 
-## Deploy on Vercel
+![home](https://github.com/perfectblue0/updated-portfolio/assets/100807923/b75ff1fa-77b7-4cb0-9b33-5705ce75f81e)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![responsive_menu](https://github.com/perfectblue0/updated-portfolio/assets/100807923/bf022318-c955-4353-90ba-d0162f8215ba)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<img width="1077" alt="home_code" src="https://github.com/perfectblue0/updated-portfolio/assets/100807923/a90a1780-99f3-4819-8dee-c81f1ba1c398">
+
+<img width="920" alt="about_code" src="https://github.com/perfectblue0/updated-portfolio/assets/100807923/dc6662c5-9489-4ce1-941b-f7dae45b477c">
+
+## License
+
+Please refer to repo.
+
+
+
+
+
+
+
