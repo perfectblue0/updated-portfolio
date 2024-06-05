@@ -22,10 +22,9 @@ export default function AboutPage() {
           {/* description bio */}
           <p className="text-lg xs:text-sm">
             Recent full-stack coding bootcamp graduate with a versatile skill
-            set, encompassing adaptive teaching, compliance management, and
-            progress assessment. My commitment to detail and adaptability make
-            me a valuable asset in dynamic environments, ready to contribute
-            effectively to innovative projects.
+            set, encompassing adaptive teaching, collaboration, and problem
+            solving. My commitment to detail and adaptability make me a valuable
+            asset in dynamic environments.
           </p>
         </div>
         {/* container skills */}
@@ -75,7 +74,7 @@ export default function AboutPage() {
             {experiences.map((exp) => (
               <div className="flex flex-row mb-6" key={exp.id}>
                 <div className="w-1/3 mr-4">
-                  <h4 className="mb-2 text-lg xs:text-base">{exp.event}</h4>
+                  <h3 className="mb-2 text-lg xs:text-base">{exp.event}</h3>
                   <p className="text-sm">{exp.date}</p>
                 </div>
                 <p className="w-2/3 text-sm">{exp.description}</p>
