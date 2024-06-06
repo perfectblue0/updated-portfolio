@@ -2,7 +2,7 @@
 
 ## Description
 
-A Server Side Rendered (SSR) website that uses the “use client” directive on several files so that they can be interactive; this allows for the use of react hooks and click events. This responsive application is secured with the help of DOMPurify, and RegEx for email validation. My portfolio website’s Lighthouse scores are as follows on a desktop: Performance 100, Accessibility 100, Best Practices 96, and SEO 100.
+A Server Side Rendered (SSR) website that uses the “use client” directive on several files so that they can be interactive; this allows for the use of react hooks and click events. This responsive application is secured with the help of DOMPurify, and RegEx for email validation. My portfolio website’s Lighthouse scores are as follows on a desktop: Performance 100, Accessibility 100, Best Practices 100, and SEO 100.
 
 ## Table of Contents
 
@@ -12,7 +12,7 @@ A Server Side Rendered (SSR) website that uses the “use client” directive on
 
 ## Installation
 
-There is no installation necessary. Click on the link below to explore our app.
+There is no installation necessary. Click on the link below to explore the app.
 
 [My Portfolio Website](https://avidwebdev.com)
 
@@ -33,10 +33,3 @@ Check out my Repo
 ## License
 
 Please refer to repo.
-
-
-
-
-
-
-
