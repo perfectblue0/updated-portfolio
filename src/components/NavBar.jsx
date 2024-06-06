@@ -80,9 +80,9 @@ export default function NavBar() {
         <Link href="https://github.com/perfectblue0">
           {/* need to add images 2x's this size */}
           <Image
-            src="/github_resized.png"
-            // srcSet="/github_mod.png 1x, /github_mod@2x.png 2x"
-            // sizes="30px"
+            src="/github.png"
+            srcSet="/github.png 1x, /github_2x.png 2x"
+            sizes="30px"
             alt="github logo with link to my profile"
             width={30}
             height={30}
@@ -90,9 +90,9 @@ export default function NavBar() {
         </Link>
         <Link href="https://www.linkedin.com/in/paola-g-lupercio/">
           <Image
-            src="/linkedin_mod.png"
-            // srcSet="/linkedin_mod.png 1x, /linkedin_mod@2x.png 2x"
-            // sizes="30px"
+            src="/linkedin.png"
+            srcSet="/linkedin.png 1x, /linkedin_2x.png 2x"
+            sizes="30px"
             alt="linkedIn logo with link to my profile"
             width={30}
             height={30}
