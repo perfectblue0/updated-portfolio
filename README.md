@@ -7,6 +7,7 @@ A Server Side Rendered (SSR) website that uses the “use client” directive on
 ## Table of Contents
 
 - [Installation](#installation)
+- [Technology](#technology)
 - [Screenshots](#screenshots)
 - [License](#license)
 
@@ -19,6 +20,10 @@ There is no installation necessary. Click on the link below to explore the app.
 Check out my Repo
 
 [My Portfolio Repo](https://github.com/perfectblue0/updated-portfolio)
+
+## Technology
+
+React, Next.js, Tailwind CSS, Framer-motion, EmailJs, DOMPurify, JavaScript XML(JSX)
 
 ## Screenshots
 
